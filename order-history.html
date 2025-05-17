@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History | YourStore</title>
+    <link rel="stylesheet" href="order-history.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="account-container">
+        <!-- Sidebar Navigation -->
+        <aside class="account-sidebar">
+            <div class="user-profile">
+                <div class="avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h3>Welcome, User</h3>
+            </div>
+            <nav class="account-menu">
+                <ul>
+                    <li><a href="account.html"><i class="fas fa-user"></i> Account Details</a></li>
+                    <li class="active"><a href="order-history.html"><i class="fas fa-history"></i> Order History</a></li>
+                    <li><a href="addresses.html"><i class="fas fa-map-marker-alt"></i> Addresses</a></li>
+                    <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="account-content">
+            <header class="page-header">
+                <h1>Order History</h1>
+                <p>View and manage your previous orders</p>
+            </header>
+
+            <div class="order-filters">
+                <div class="filter-group">
+                    <label for="time-period">Time Period:</label>
+                    <select id="time-period">
+                        <option value="all">All Orders</option>
+                        <option value="3months">Last 3 Months</option>
+                        <option value="6months">Last 6 Months</option>
+                        <option value="year">Last Year</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="status-filter">Status:</label>
+                    <select id="status-filter">
+                        <option value="all">All Statuses</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="processing">Processing</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                </div>
+                <button class="search-btn">Search</button>
+            </div>
+
+            <div class="orders-list">
+                <!-- Order 1 -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div class="order-meta">
+                            <span class="order-number">Order #12345</span>
+                            <span class="order-date">Placed on June 15, 2023</span>
+                        </div>
+                        <div class="order-status delivered">
+                            <i class="fas fa-check-circle"></i> Delivered
+                        </div>
+                        <div class="order-total">
+                            RS125.99
+                        </div>
+                        <button class="order-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="order-details">
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://via.placeholder.com/80" alt="Product Image">
+                                </div>
+                                <div class="item-details">
+                                    <h4>Wireless Bluetooth Headphones</h4>
+                                    <p>Quantity: 1</p>
+                                    <p class="item-price">RS89.99</p>
+                                </div>
+                            </div>
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://via.placeholder.com/80" alt="Product Image">
+                                </div>
+                                <div class="item-details">
+                                    <h4>Phone Case</h4>
+                                    <p>Quantity: 2</p>
+                                    <p class="item-price">RS18.00 <span>(RS9.00 each)</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-shopping-cart"></i> Buy Again
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-truck"></i> Track Order
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-undo"></i> Return Items
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-file-invoice"></i> View Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 2 -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div class="order-meta">
+                            <span class="order-number">Order #12344</span>
+                            <span class="order-date">Placed on May 28, 2023</span>
+                        </div>
+                        <div class="order-status shipped">
+                            <i class="fas fa-truck"></i> Shipped
+                        </div>
+                        <div class="order-total">
+                            RS67.50
+                        </div>
+                        <button class="order-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="order-details">
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://via.placeholder.com/80" alt="Product Image">
+                                </div>
+                                <div class="item-details">
+                                    <h4>Smart Watch</h4>
+                                    <p>Quantity: 1</p>
+                                    <p class="item-price">RS67.50</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-shopping-cart"></i> Buy Again
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-truck"></i> Track Order
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-file-invoice"></i> View Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 3 -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div class="order-meta">
+                            <span class="order-number">Order #12340</span>
+                            <span class="order-date">Placed on April 5, 2023</span>
+                        </div>
+                        <div class="order-status cancelled">
+                            <i class="fas fa-times-circle"></i> Cancelled
+                        </div>
+                        <div class="order-total">
+                            RS210.75
+                        </div>
+                        <button class="order-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="order-details">
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://via.placeholder.com/80" alt="Product Image">
+                                </div>
+                                <div class="item-details">
+                                    <h4>Wireless Charger</h4>
+                                    <p>Quantity: 1</p>
+                                    <p class="item-price">RS24.99</p>
+                                </div>
+                            </div>
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://via.placeholder.com/80" alt="Product Image">
+                                </div>
+                                <div class="item-details">
+                                    <h4>Bluetooth Speaker</h4>
+                                    <p>Quantity: 1</p>
+                                    <p class="item-price">RS59.99</p>
+                                </div>
+                            </div>
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="https://via.placeholder.com/80" alt="Product Image">
+                                </div>
+                                <div class="item-details">
+                                    <h4>USB-C Cable</h4>
+                                    <p>Quantity: 3</p>
+                                    <p class="item-price">RS41.85 <span>(RS13.95 each)</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-shopping-cart"></i> Buy Again
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn disabled">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <span class="page-numbers">1 of 3</span>
+                <button class="page-btn">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="order-history.js"></script>
+</body>
+</html>
